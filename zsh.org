@@ -5,59 +5,74 @@
 #+PROPERTY: header-args+ :comments both
 #+PROPERTY: header-args+ :tangle "~/.zshrc"
 
+* Oh my zsh
+   #+BEGIN_SRC sh
+     export ZSH="/Users/yurii.voderatskyi/.oh-my-zsh"
+     source $ZSH/oh-my-zsh.sh
+   #+END_SRC
 
-#+BEGIN_SRC sh
-  export ZSH="/Users/yurii.voderatskyi/.oh-my-zsh"
-  source $ZSH/oh-my-zsh.sh
+* Additional environment parameters
+  #+BEGIN_SRC sh
+    # Hide username
+    DEFAULT_USER=$USER
 
-  # Hide username
-  DEFAULT_USER=$USER
+    # You may need to manually set your language environment
+    export LANG=en_US.UTF-8
 
-  # You may need to manually set your language environment
-  export LANG=en_US.UTF-8
+    export PATH="/usr/local/sbin:$PATH"
 
-  export PATH="/usr/local/sbin:$PATH"
+    #+END_SRC
 
+* Iterm2 integration                                               :mac_only:
 
-  [ -f ~/.iterm2_shell_integration ] && source ~/.iterm2_shell_integration.zsh
-  [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc ] &&  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-  [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ] && source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+  #+BEGIN_SRC sh
+    [ -f ~/.iterm2_shell_integration ] && source ~/.iterm2_shell_integration.zsh
+  #+END_SRC
 
-  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-  source ~/enhancd/init.sh
+* Google Cloud SDK                                                 :mac_only:
 
+  #+BEGIN_SRC sh
+     [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc ] &&  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+     [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ] && source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+  #+END_SRC
 
-  export ENHANCD_FILTER="fzf:non-existing-filter"
-
-  [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-  source /usr/local/share/antigen/antigen.zsh
-
-  antigen use oh-my-zsh
-
-  # Bundles from the default repo (robbyrussell's oh-my-zsh).
-  antigen bundle git
-  antigen bundle pip
-  antigen bundle chrissicool/zsh-256color
-  antigen bundle dotenv
-  antigen bundle docker
-  antigen bundle gcloud
-  antigen bundle django
-  antigen bundle httpie
-  antigen bundle iterm2
-  antigen bundle zsh-users/zsh-autosuggestions
-  antigen bundle zpm-zsh/colors
-  antigen bundle b4b4r07/enhancd
-  antigen bundle wting/autojump
-  antigen bundle zsh-users/zsh-syntax-highlighting
-  antigen bundle virtualenvwrapper
-  antigen bundle common-aliases
-  antigen bundle molovo/tipz
-  # Load the theme.
-  # antigen theme agnoster
-  antigen theme dracula/zsh
+* rest ...
+   #+BEGIN_SRC sh
+     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+     source ~/enhancd/init.sh
 
 
-  # Tell Antigen that you're done.
-  antigen apply
+     export ENHANCD_FILTER="fzf:non-existing-filter"
+
+     [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+     source /usr/local/share/antigen/antigen.zsh
+
+     antigen use oh-my-zsh
+
+     # Bundles from the default repo (robbyrussell's oh-my-zsh).
+     antigen bundle git
+     antigen bundle pip
+     antigen bundle chrissicool/zsh-256color
+     antigen bundle dotenv
+     antigen bundle docker
+     antigen bundle gcloud
+     antigen bundle django
+     antigen bundle httpie
+     antigen bundle iterm2
+     antigen bundle zsh-users/zsh-autosuggestions
+     antigen bundle zpm-zsh/colors
+     antigen bundle b4b4r07/enhancd
+     antigen bundle wting/autojump
+     antigen bundle zsh-users/zsh-syntax-highlighting
+     antigen bundle virtualenvwrapper
+     antigen bundle common-aliases
+     antigen bundle molovo/tipz
+     # Load the theme.
+     # antigen theme agnoster
+     antigen theme dracula/zsh
+
+
+     # Tell Antigen that you're done.
+     antigen apply
 
 #+END_SRC
