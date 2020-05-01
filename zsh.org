@@ -5,18 +5,23 @@
 #+PROPERTY: header-args+ :comments both
 #+PROPERTY: header-args+ :tangle "~/.zshrc"
 
-* Oh my zsh
+* antigen - plugin manager
+   #+BEGIN_SRC sh
+     source /usr/local/share/antigen/antigen.zsh
+   #+END_SRC
+
+* oh-my-zsh
    #+BEGIN_SRC sh
      export ZSH="/Users/yurii.voderatskyi/.oh-my-zsh"
      source $ZSH/oh-my-zsh.sh
+     antigen use oh-my-zsh
    #+END_SRC
 
-* Additional environment parameters
+* customization
   #+BEGIN_SRC sh
     # Hide username
     DEFAULT_USER=$USER
 
-    # You may need to manually set your language environment
     export LANG=en_US.UTF-8
 
     export PATH="/usr/local/sbin:$PATH"
@@ -27,52 +32,63 @@
 
   #+BEGIN_SRC sh
     [ -f ~/.iterm2_shell_integration ] && source ~/.iterm2_shell_integration.zsh
+    antigen bundle iterm2
   #+END_SRC
 
 * Google Cloud SDK                                                 :mac_only:
 
   #+BEGIN_SRC sh
-     [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc ] &&  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-     [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ] && source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+    [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc ] &&  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+    [ -f /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ] && source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+    antigen bundle gcloud
   #+END_SRC
 
-* rest ...
-   #+BEGIN_SRC sh
-     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-     source ~/enhancd/init.sh
+* fzf - fuzzy finder
+  #+BEGIN_SRC sh
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  #+END_SRC
 
+* enhancd - better cd command
+  #+BEGIN_SRC sh
+    source ~/enhancd/init.sh
+    export ENHANCD_FILTER="fzf:non-existing-filter"
+    antigen bundle b4b4r07/enhancd     
+  #+END_SRC
 
-     export ENHANCD_FILTER="fzf:non-existing-filter"
+* autojump - fast navigation in filesystem
+  #+BEGIN_SRC sh
+    [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+    antigen bundle wting/autojump
+  #+END_SRC
 
-     [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-     source /usr/local/share/antigen/antigen.zsh
+* plugins for python
+  #+BEGIN_SRC sh
+    antigen bundle pip
+    antigen bundle django
+    antigen bundle virtualenvwrapper
+  #+END_SRC
 
-     antigen use oh-my-zsh
+* plugins misc
+  #+BEGIN_SRC sh
+    antigen bundle git
+    antigen bundle chrissicool/zsh-256color
+    antigen bundle dotenv
+    antigen bundle docker
+    antigen bundle httpie
+    antigen bundle zsh-users/zsh-autosuggestions
+    antigen bundle zpm-zsh/colors
+    antigen bundle zsh-users/zsh-syntax-highlighting
+    antigen bundle common-aliases
+    antigen bundle molovo/tipz
+  #+END_SRC
 
-     # Bundles from the default repo (robbyrussell's oh-my-zsh).
-     antigen bundle git
-     antigen bundle pip
-     antigen bundle chrissicool/zsh-256color
-     antigen bundle dotenv
-     antigen bundle docker
-     antigen bundle gcloud
-     antigen bundle django
-     antigen bundle httpie
-     antigen bundle iterm2
-     antigen bundle zsh-users/zsh-autosuggestions
-     antigen bundle zpm-zsh/colors
-     antigen bundle b4b4r07/enhancd
-     antigen bundle wting/autojump
-     antigen bundle zsh-users/zsh-syntax-highlighting
-     antigen bundle virtualenvwrapper
-     antigen bundle common-aliases
-     antigen bundle molovo/tipz
-     # Load the theme.
-     # antigen theme agnoster
-     antigen theme dracula/zsh
+* theme - [[https://draculatheme.com/zsh][dracula]]
+  #+BEGIN_SRC sh
+    antigen theme dracula/zsh
+  #+END_SRC
 
+* antigen apply changes
+  #+BEGIN_SRC sh
+    antigen apply
+  #+END_SRC
 
-     # Tell Antigen that you're done.
-     antigen apply
-
-#+END_SRC
