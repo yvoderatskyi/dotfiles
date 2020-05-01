@@ -2,8 +2,13 @@
 #+AUTHOR: Yurii Voderatskyi
 #+KEYWORDS: personal dotfiles config
 
-This project aims to collect configurations for various programs I'm using across different computers.
+** Why?
+   This project aims to collect configurations for various programs I'm using across different computers.
 
-Configurations:
-
-1. [[file:zsh.org][ZSH]] (Z Shell) - is my primary interactive shell
+** Configurations:
+   Currently, I support the following configurations.
+   
+   1. [[file:zsh.org][ZSH]] (Z Shell) - is my primary interactive shell
+   
+** What's next?
+   See [[file:todo.org][todos]].
