@@ -1,2 +1,2 @@
-#+TITLE: Dotfiles README
+#+TITLE: My personal dotfiles
 #+AUTHOR: Yurii Voderatskyi
