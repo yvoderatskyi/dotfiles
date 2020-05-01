@@ -6,4 +6,4 @@ This project aims to collect configurations for various programs I'm using acros
 
 Configurations:
 
-1. [[file:zsh.org][*ZSH*]] (Z Shell) - is my primary interactive shell
+1. [[file:zsh.org][ZSH]] (Z Shell) - is my primary interactive shell
