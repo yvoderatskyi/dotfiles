@@ -1,7 +1,7 @@
 
 * TODO Git 
-
 * TODO Emacs / Spacemacs 
 
 * TODO Vim 
+* TODO Brew - Brewfile 
 
