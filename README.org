@@ -1,2 +1,5 @@
 #+TITLE: My personal dotfiles
 #+AUTHOR: Yurii Voderatskyi
+#+KEYWORDS: personal dotfiles config
+
+This project aims to collect configurations for various programs I'm using across different computers.
