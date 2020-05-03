@@ -4,16 +4,12 @@
 
 ** Why?
    This project aims to collect configurations for various programs I'm using across different computers.
-
-** Requirements
-
+** Requirements 
 - A working installation [[https://www.spacemacs.org/][Spacemacs]]
 - [[https://www.spacemacs.org/layers/+emacs/org/README.html][Org layer]]
-
 ** Configurations:
    Currently, I support the following configurations.
    
-   1. [[file:zsh.org][ZSH]] (Z Shell) - is my primary interactive shell
-   
+   1. [[file:zsh.org][ZSH]] (Z Shell) - is my primary interactive shell.
 ** What's next?
    See [[file:todo.org][todos]].
