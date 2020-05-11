@@ -11,6 +11,9 @@
          linux*)
              source /usr/share/zsh/share/antigen.zsh
              ;;
+         darwin*)
+             source /usr/local/share/antigen/antigen.zsh
+             ;;
      esac
    #+END_SRC
 
