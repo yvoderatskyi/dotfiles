@@ -75,6 +75,7 @@
 * plugins misc
   #+BEGIN_SRC sh
     antigen bundle git
+    antigen bundle vi-mode
     antigen bundle chrissicool/zsh-256color
     antigen bundle dotenv
     antigen bundle docker
