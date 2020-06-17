@@ -1,8 +1,17 @@
 
-* TODO Git 
+* TODO Git
+  I want to:
++ set my name. my email should be set per project.
++ add a few aliases
++ configure a different diff tool - [[https://github.com/dandavison/delta][Delta]].
 * TODO Emacs / Spacemacs 
-  The configuration is not tangled. I should fix this
-
-* TODO Vim 
-* TODO Brew - Brewfile 
-
+  The configuration is not tangled. I should fix this.
+* TODO Vim
+  I want to have a minimal vim configuration. Features I want:
++ plugin manager
++ bare minimum of plugins
++ syntax highlighting
++ color scheme of preference (Dracula ?)
++ font of preference (Fira Code? JetBrains Mono?)
+* TODO Brew - Brewfile
+  I install quite a few apps to Mac and want to automate that.
