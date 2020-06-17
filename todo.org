@@ -1,6 +1,7 @@
 
 * TODO Git 
 * TODO Emacs / Spacemacs 
+  The configuration is not tangled. I should fix this
 
 * TODO Vim 
 * TODO Brew - Brewfile 
