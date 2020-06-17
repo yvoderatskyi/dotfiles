@@ -15,4 +15,4 @@
    See [[file:todo.org][todos]].
 
 ** Acknowledgments
-   This repository is heavily inspired by the blog post [[https://writepermission.com/introducing-literate-dotfiles.html][Introducing literate dotfiles]].
+   This repository is heavily inspired by the blog post [[https://writepermission.com/introducing-literate-dotfiles.html][Introducing literate dotfiles]] and [[https://github.com/jdenen/config][jdenen/config]]. 
