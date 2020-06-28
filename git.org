@@ -9,6 +9,11 @@
     [user]
       name = Yurii Voderatskyi
   #+END_SRC
+* Set vim as editor
+  #+BEGIN_SRC conf :tangle "~/.gitconfig"
+    [core]
+      editor = vim
+  #+END_SRC
 * Credentials helper
   #+BEGIN_SRC conf :tangle "~/.gitconfig"
     [credential]
