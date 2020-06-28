@@ -40,8 +40,6 @@
        ;; List of configuration layers to load.
        dotspacemacs-configuration-layers
        '(
-         javascript
-         sql
          pdf
          yaml
          html
