@@ -3,7 +3,7 @@
 #+KEYWORDS: personal dotfiles config version control
 #+PROPERTY: header-args :comments both
 
-* Email
+* User name
   I prefer [[#git-email-per-project][setting emails per project]] and name - globally. On Mac I use OSX Keychain to store SSH keys.
   #+BEGIN_SRC conf :tangle "~/.gitconfig"
     [user]
