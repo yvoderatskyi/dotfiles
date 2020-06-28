@@ -69,21 +69,19 @@
          org
          (org :variables
               org-enable-github-support t
-              org-enable-bootstrap-support t
               org-enable-reveal-js-support t
               org-projectile-file "todo.org")
          confluence
          deft
          (deft :variables
-           deft-zetteldeft t)
+               deft-zetteldeft t)
          plantuml
          (plantuml :variables
-              org-plantuml-jar-path "/usr/local/Cellar/plantuml/1.2020.11/libexec/plantuml.jar"
-              plantuml-jar-path "/usr/local/Cellar/plantuml/1.2020.11/libexec/plantuml.jar"
-              plantuml-default-exec-mode 'jar
-              )
+                   org-plantuml-jar-pathuml-jar-path "/usr/local/Cellar/plantuml/1.2020.14/libexec/plantuml.jar"
+                   plantuml-jar-path "/usr/local/Cellar/plantuml/1.2020.14/libexec/plantuml.jar"
+                   plantuml-default-exec-mode 'jar
+                   )
          shell
-         latex
          ;; (shell :variables
          ;;        shell-default-height 30
          ;;        shell-default-position 'bottom)
@@ -101,11 +99,14 @@
                                           flycheck-plantuml
                                           dracula-theme
                                           langtool
+                                          org-super-agenda
                                           )
        ;; A list of packages that cannot be updated.
        dotspacemacs-frozen-packages '()
        ;; A list of packages that will not be installed and loaded.
-       dotspacemacs-excluded-packages '()
+       dotspacemacs-excluded-packages '(
+                                        org-brain
+                                        )
        ;; Defines the behaviour of Spacemacs when installing packages.
        ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
        ;; `used-only' installs only explicitly used packages and uninstall any
@@ -363,20 +364,57 @@
     This is the place where most of your configurations should be done. Unless it is
     explicitly specified that a variable should be set before a package is loaded,
     you should place your code here."
-      (setq org-agenda-files '(
-                               "~/org/inbox.org"
-                               "~/org/gtd.org"
-                               "~/org/tickler.org"
-                               )
-            org-capture-templates '(("t" "Todo [inbox]" entry (file+headline "~/org/inbox.org" "Tasks") "* TODO %i%?"))
-            org-refile-targets '(("~/org/gtd.org" :maxlevel . 3)
-                                 ("~/org/tickler.org" :maxlevel . 2))
-            org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(p)" "WAITING(w)" "|" "DONE(d)" "CANCELED(c)")))
-      (org-babel-do-load-languages 'org-babel-load-languages '(
-                                                               (plantuml . t)
-                                                               (shell . t)
-                                                               ))
-     (setq deft-directory "~/org/notes")
+      (with-eval-after-load 'org
+        (setq org-agenda-files '(
+                                 "~/org/inbox.org"
+                                 "~/org/gtd.org"
+                                 "~/org/tickler.org"
+                                 )
+              org-capture-templates '(("t" "Todo [inbox]" entry (file+headline "~/org/inbox.org" "Tasks") "* TODO %i%?"))
+              org-refile-targets '(("~/org/gtd.org" :maxlevel . 3)
+                                   ("~/org/tickler.org" :maxlevel . 2))
+              org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(p)" "WAITING(w)" "|" "DONE(d)" "CANCELED(c)"))
+              org-agenda-include-diary t)
+        (org-babel-do-load-languages 'org-babel-load-languages '(
+                                                                 (plantuml . t)
+                                                                 (shell . t)
+                                                                 ))
+        (org-super-agenda-mode t)
+        (setq org-agenda-custom-commands
+              '(("z" "Super agenda view"
+                ((agenda "" ((org-agenda-span 'day)
+                              (org-super-agenda-groups
+                              '((:name "Today"
+                                        :time-grid t
+                                        :date today
+                                        :todo "TODAY"
+                                        :scheduled today
+                                        :order 1)))))
+                  (alltodo "" ((org-agenda-overriding-header "")
+                              (org-super-agenda-groups
+                                '((:name "Next to do"
+                                        :todo "NEXT"
+                                        :order 1)
+                                  (:name "Important"
+                                        :priority "A"
+                                        :order 3)
+                                  (:name "Due Today"
+                                        :deadline today
+                                        :order 2)
+                                  (:name "Due Soon"
+                                        :deadline future
+                                        :order 5)
+                                  (:name "2020Q2"
+                                         :tag "2020Q2")
+                                  (:name "Overdue"
+                                        :deadline past
+                                        :order 4)
+                                  (:name "Waiting"
+                                        :todo "WAITING"
+                                        :order 20))))))))))
+     (setq deft-directory "~/Projects/org/notes"
+           deft-extensions '("org" "md" "txt")
+           )
      (setq python-pipenv-activate t)
      (setq langtool-language-tool-jar "/Users/yurii.voderatskyi/.languagetool/LanguageTool-4.9.1/languagetool-commandline.jar")
      )
@@ -416,4 +454,4 @@
      ;; If there is more than one, they won't work right.
      )
     )
-#+END_SRC
+  #+END_SRC
