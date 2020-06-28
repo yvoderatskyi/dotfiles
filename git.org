@@ -25,6 +25,11 @@
   :PROPERTIES:
   :CUSTOM_ID: git-email-per-project
   :END:
-  #+BEGIN_EXAMPLE
+  #+BEGIN_SRC shell
     git config user.email "my email"
-  #+END_EXAMPLE
+  #+END_SRC
+* To set signing key
+  #+BEGIN_SRC shell
+    gpg --list-secret-keys --keyid-format LONG
+    git config user.signingkey <key>
+  #+END_SRC
