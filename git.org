@@ -21,15 +21,24 @@
     [interactive]
       diffFilter = delta --color-only
   #+END_SRC
-* To set email per project
+* Generate GPG key
+  #+BEGIN_SRC shell
+    gpg --full-generate-key
+  #+END_SRC
+* List GPG keys
+  #+BEGIN_SRC shell
+    gpg --list-secret-keys --keyid-format LONG
+  #+END_SRC
+* Add GPG key to Github
+  See [[https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account][Adding a new GPG key to your GitHub account - GitHub Help]]
+* Set email per project
   :PROPERTIES:
   :CUSTOM_ID: git-email-per-project
   :END:
   #+BEGIN_SRC shell
     git config user.email "my email"
   #+END_SRC
-* To set signing key
+* Set signing key
   #+BEGIN_SRC shell
-    gpg --list-secret-keys --keyid-format LONG
     git config user.signingkey <key>
   #+END_SRC
