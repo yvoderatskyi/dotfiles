@@ -8,3 +8,4 @@
   The configuration is not tangled. I should fix this.
 * TODO Brew - Brewfile
   I install quite a few apps to Mac and want to automate that.
+* TODO Make Git helper portable 

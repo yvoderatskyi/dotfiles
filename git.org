@@ -1,0 +1,21 @@
+#+TITLE: Git
+#+AUTHOR: Yurii Voderatskyi
+#+KEYWORDS: personal dotfiles config version control
+#+PROPERTY: header-args :comments both
+
+* Personal
+  I prefer setting emails per project and name - globally. On Mac I use OSX Keychain to store SSH keys.
+  #+BEGIN_SRC conf :tangle "~/.gitconfig"
+    [user]
+      name = Yurii Voderatskyi
+    [credential]
+      helper = osxkeychain
+    [core]
+      pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Dracula'
+    [interactive]
+      diffFilter = delta --color-only
+  #+END_SRC
+
+  #+BEGIN_EXAMPLE
+    git config user.email "my email"
+  #+END_EXAMPLE
