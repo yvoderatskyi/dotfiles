@@ -367,20 +367,15 @@
                                "~/org/inbox.org"
                                "~/org/gtd.org"
                                "~/org/tickler.org"
-                               ))
-     (setq org-capture-templates '(("t" "Todo [inbox]" entry (file+headline "~/org/inbox.org" "Tasks") "* TODO %i%?")))
-     (setq org-refile-targets '(("~/org/gtd.org" :maxlevel . 3)
-                                ("~/org/tickler.org" :maxlevel . 2)))
-     (setq org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(p)" "WAITING(w)" "|" "DONE(d)" "CANCELED(c)")))
-     (setq org-brain-path "~/org/brain")
-     (with-eval-after-load 'evil
-       (evil-set-initial-state 'org-brain-visualize-mode 'emacs))
-     (org-babel-do-load-languages 'org-babel-load-languages '(
-                                                              (plantuml . t)
-                                                              (shell . t)
-                                                              )
-
-                                  )
+                               )
+            org-capture-templates '(("t" "Todo [inbox]" entry (file+headline "~/org/inbox.org" "Tasks") "* TODO %i%?"))
+            org-refile-targets '(("~/org/gtd.org" :maxlevel . 3)
+                                 ("~/org/tickler.org" :maxlevel . 2))
+            org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(p)" "WAITING(w)" "|" "DONE(d)" "CANCELED(c)")))
+      (org-babel-do-load-languages 'org-babel-load-languages '(
+                                                               (plantuml . t)
+                                                               (shell . t)
+                                                               ))
      (setq deft-directory "~/org/notes")
      (setq python-pipenv-activate t)
      (setq langtool-language-tool-jar "/Users/yurii.voderatskyi/.languagetool/LanguageTool-4.9.1/languagetool-commandline.jar")
