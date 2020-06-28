@@ -1,13 +1,22 @@
 #+TITLE: Vim
 #+AUTHOR: Yurii Voderatskyi
 #+KEYWORDS: personal dotfiles config vim org
-#+PROPERTY: header-args :export none :results silent
+#+PROPERTY: header-args+ :comments both
+#+PROPERTY: header-args+ :tangle "~/.vimrc"
+
+* Plugin Manager
+  #+BEGIN_SRC shell
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  #+END_SRC
 
 * Minimal configuration
   #+BEGIN_SRC text :tangle "~/.vimrc"
     set nocompatible              " be iMproved, required
     filetype off                  " required
+  #+END_SRC
 
+* Plugins
+  #+BEGIN_SRC text :tangle "~/.vimrc"
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
@@ -15,6 +24,10 @@
     Plugin 'flazz/vim-colorschemes'
     Plugin 'vim-airline/vim-airline'
     call vundle#end()            " required
+  #+END_SRC
+
+* Visual configurations
+  #+BEGIN_SRC text :tangle "~/.vimrc"
     filetype plugin indent on    " required
 
     set t_Co=256
@@ -29,7 +42,10 @@
     set hidden
     set cursorline
     set number
-    set colorcolumn=81
+    set colorcolumn=80
+  #+END_SRC
 
+* Color schema - [[https://draculatheme.com/vim][Dracula]]
+  #+BEGIN_SRC text :tangle "~/.vimrc"
     colorscheme dracula
   #+END_SRC
