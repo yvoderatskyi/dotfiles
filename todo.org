@@ -1,10 +1,10 @@
 
 * TODO Git
   I want to:
-** DONE set my name. my email should be set per project.
+** DONE set my name. my email should be set per project.            :ARCHIVE:
    CLOSED: [2020-06-28 Sun 13:40]
 ** add a few aliases
-** DONE configure a different diff tool - [[https://github.com/dandavison/delta][Delta]].
+** DONE configure a different diff tool - [[https://github.com/dandavison/delta][Delta]].                    :ARCHIVE:
    CLOSED: [2020-06-28 Sun 13:40]
 * TODO Emacs / Spacemacs 
   The configuration is not tangled. I should fix this.
