@@ -3,19 +3,28 @@
 #+KEYWORDS: personal dotfiles config version control
 #+PROPERTY: header-args :comments both
 
-* Personal
-  I prefer setting emails per project and name - globally. On Mac I use OSX Keychain to store SSH keys.
+* Email
+  I prefer [[#git-email-per-project][setting emails per project]] and name - globally. On Mac I use OSX Keychain to store SSH keys.
   #+BEGIN_SRC conf :tangle "~/.gitconfig"
     [user]
       name = Yurii Voderatskyi
+  #+END_SRC
+* Credentials helper
+  #+BEGIN_SRC conf :tangle "~/.gitconfig"
     [credential]
       helper = osxkeychain
+  #+END_SRC
+* Delta as pager and diff tool
+  #+BEGIN_SRC shell
     [core]
       pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Dracula'
     [interactive]
       diffFilter = delta --color-only
   #+END_SRC
-
+* To set email per project
+  :PROPERTIES:
+  :CUSTOM_ID: git-email-per-project
+  :END:
   #+BEGIN_EXAMPLE
     git config user.email "my email"
   #+END_EXAMPLE
