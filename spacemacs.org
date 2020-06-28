@@ -2,7 +2,7 @@
 #+AUTHOR: Yurii Voderatskyi
 #+KEYWORDS: personal dotfiles config emacs org
 #+PROPERTY: header-args :export none :results silent
-#+PROPERTY: header-args+ :tangle "~/.spacemacs.bak"
+#+PROPERTY: header-args+ :tangle "~/.spacemacs"
 
 * Spacemacs configuration
   I prefer to use [[http://www.literateprogramming.com/index.html][literate programming]] style of dotfiles
@@ -46,17 +46,7 @@
          yaml
          html
          python
-         dap
          lsp
-         restclient
-         (restclient :variables
-                     restclient-use-org t)
-         ;; pdf-tools
-         ;; ----------------------------------------------------------------
-         ;; Example of useful layers you may want to use right away.
-         ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-         ;; <M-m f e R> (Emacs style) to install them.
-         ;; ----------------------------------------------------------------
          helm
          auto-completion
          ;; better-defaults
@@ -65,7 +55,6 @@
          markdown
          osx
          docker
-         treemacs
          org
          (org :variables
               org-enable-github-support t
@@ -87,7 +76,6 @@
          ;;        shell-default-position 'bottom)
          spell-checking
          syntax-checking
-         ;; version-control
          )
        ;; List of additional packages that will be installed without being
        ;; wrapped in a layer. If you need some configuration for these
@@ -95,7 +83,6 @@
        ;; configuration in `dotspacemacs/user-config'.
        dotspacemacs-additional-packages '(
                                           dockerfile-mode
-                                          org-plus-contrib
                                           flycheck-plantuml
                                           dracula-theme
                                           langtool
@@ -375,10 +362,13 @@
                                    ("~/org/tickler.org" :maxlevel . 2))
               org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(p)" "WAITING(w)" "|" "DONE(d)" "CANCELED(c)"))
               org-agenda-include-diary t)
-        (org-babel-do-load-languages 'org-babel-load-languages '(
-                                                                 (plantuml . t)
-                                                                 (shell . t)
-                                                                 ))
+        (org-babel-do-load-languages
+         'org-babel-load-languages
+         '(
+           (plantuml . t)
+           (shell . t)
+           (emacs-lisp . t)
+           ))
         (org-super-agenda-mode t)
         (setq org-agenda-custom-commands
               '(("z" "Super agenda view"
@@ -392,20 +382,18 @@
                                         :order 1)))))
                   (alltodo "" ((org-agenda-overriding-header "")
                               (org-super-agenda-groups
-                                '((:name "Next to do"
-                                        :todo "NEXT"
-                                        :order 1)
-                                  (:name "Important"
+                                '((:name "Important"
                                         :priority "A"
-                                        :order 3)
+                                        :order 2)
                                   (:name "Due Today"
                                         :deadline today
-                                        :order 2)
+                                        :order 1)
                                   (:name "Due Soon"
                                         :deadline future
                                         :order 5)
                                   (:name "2020Q2"
-                                         :tag "2020Q2")
+                                         :tag "2020Q2"
+                                         :order 3)
                                   (:name "Overdue"
                                         :deadline past
                                         :order 4)
