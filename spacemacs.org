@@ -5,7 +5,7 @@
 #+PROPERTY: header-args+ :tangle "~/.spacemacs.bak"
 
 * Spacemacs configuration
-  I prefer to use literate programming style of dotfiles
+  I prefer to use [[http://www.literateprogramming.com/index.html][literate programming]] style of dotfiles
   #+BEGIN_SRC emacs-lisp
     ;; -*- mode: emacs-lisp -*-
     ;; This file is loaded by Spacemacs at startup.
