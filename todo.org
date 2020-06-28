@@ -1,11 +1,14 @@
 
 * TODO Git
   I want to:
-+ set my name. my email should be set per project.
-+ add a few aliases
-+ configure a different diff tool - [[https://github.com/dandavison/delta][Delta]].
+** DONE set my name. my email should be set per project.
+   CLOSED: [2020-06-28 Sun 13:40]
+** add a few aliases
+** DONE configure a different diff tool - [[https://github.com/dandavison/delta][Delta]].
+   CLOSED: [2020-06-28 Sun 13:40]
 * TODO Emacs / Spacemacs 
   The configuration is not tangled. I should fix this.
 * TODO Brew - Brewfile
   I install quite a few apps to Mac and want to automate that.
 * TODO Make Git helper portable 
+  [[https://www.softwaredeveloper.blog/git-credential-storage-libsecret][Libsecret - remember Git credentials in Linux Mint and Ubuntu securely]] 
