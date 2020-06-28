@@ -6,17 +6,17 @@
 
 ** Why?
    This project aims to collect configurations for various programs I'm using across different computers.
-** Requirements 
+** Requirements
 - A working installation [[https://www.spacemacs.org/][Spacemacs]]
 - [[https://www.spacemacs.org/layers/+emacs/org/README.html][Org layer]]
 ** Configurations:
    I support the following configurations.
-*** [[file:zsh.org][ZSH]] (Z Shell) - is my primary interactive shell.
-*** [[file:spacemacs.org][Spacemacs]] - is my primary text editor / note taking / planning / etc all-in-one tool.
-*** [[file:vim.org][Vim]] - is a secondary text editor.
-*** [[file:git.org][Git]] - for version control.
+- [[file:zsh.org][ZSH]] (Z Shell) :: is my primary interactive shell.
+- [[file:spacemacs.org][Spacemacs]] :: is my primary text editor / note taking / planning / etc all-in-one tool.
+- [[file:vim.org][Vim]] :: is a secondary text editor.
+- [[file:git.org][Git]] :: for version control.
 ** What's next?
    See [[file:todo.org][todos]].
 
 ** Acknowledgments
-   This repository is heavily inspired by the blog post [[https://writepermission.com/introducing-literate-dotfiles.html][Introducing literate dotfiles]] and [[https://github.com/jdenen/config][jdenen/config]]. 
+   This repository is heavily inspired by the blog post [[https://writepermission.com/introducing-literate-dotfiles.html][Introducing literate dotfiles]] and [[https://github.com/jdenen/config][jdenen/config]].
