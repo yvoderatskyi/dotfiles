@@ -14,7 +14,7 @@
     [credential]
       helper = osxkeychain
   #+END_SRC
-* Delta as pager and diff tool
+* [[https://github.com/dandavison/delta][Delta]] as pager and diff tool
   #+BEGIN_SRC conf :tangle "~/.gitconfig"
     [core]
       pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Dracula'
