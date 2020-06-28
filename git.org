@@ -42,3 +42,7 @@
   #+BEGIN_SRC shell
     git config user.signingkey <key>
   #+END_SRC
+* Sign commits by default
+  #+BEGIN_SRC shell
+    git config commit.gpgsign true
+  #+END_SRC
