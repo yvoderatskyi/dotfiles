@@ -449,14 +449,3 @@
      )
     )
   #+END_SRC
-* Fix org mode errors after installation
-  #+BEGIN_SRC shell
-    cd ~/.emacs.d/elpa/develop
-    find org*/*.elc -print0 | xargs -0 rm
-  #+END_SRC
-  #+BEGIN_EXAMPLE
-  spacemacs/recompile-elpa
-  #+END_EXAMPLE
-  #+BEGIN_EXAMPLE
-  SPC f e c
-  #+END_EXAMPLE
