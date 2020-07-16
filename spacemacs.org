@@ -64,8 +64,8 @@
                  deft-zetteldeft t)
            plantuml
            (plantuml :variables
-                     org-plantuml-jar-pathuml-jar-path "/usr/local/Cellar/plantuml/1.2020.14/libexec/plantuml.jar"
-                     plantuml-jar-path "/usr/local/Cellar/plantuml/1.2020.14/libexec/plantuml.jar"
+                     org-plantuml-jar-path "/usr/local/Cellar/plantuml/1.2020.15/libexec/plantuml.jar"
+                     plantuml-jar-path "/usr/local/Cellar/plantuml/1.2020.15/libexec/plantuml.jar"
                      plantuml-default-exec-mode 'jar
                      )
            shell
