@@ -362,7 +362,9 @@
               org-capture-templates '(("t" "Todo [inbox]" entry (file+headline "~/org/inbox.org" "Tasks") "* TODO %i%?"))
               org-refile-targets '(("~/org/gtd.org" :maxlevel . 3))
               org-todo-keywords '((sequence "TODO(t)" "IN PROGRESS(p)" "WAITING(w)" "|" "DONE(d)" "CANCELED(c)"))
-              org-agenda-include-diary t)
+              org-agenda-include-diary t
+              org-icalendar-use-deadline '(todo-start event-if-todo event-if-not-todo)
+              org-icalendar-use-scheduled '(todo-start event-if-todo event-if-not-todo))
         (org-babel-do-load-languages
          'org-babel-load-languages
          '(
