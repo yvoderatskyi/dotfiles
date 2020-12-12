@@ -1,7 +1,7 @@
 #+TITLE: Vim
 #+AUTHOR: Yurii Voderatskyi
 #+KEYWORDS: personal dotfiles config vim org
-#+PROPERTY: header-args+ :comments both
+#+PROPERTY: header-args+ :comments no
 #+PROPERTY: header-args+ :tangle "~/.vimrc"
 
 * Plugin Manager
