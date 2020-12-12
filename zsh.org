@@ -1,4 +1,3 @@
-
 #+TITLE: ZSH
 #+AUTHOR: Yurii Voderatskyi
 #+KEYWORDS: personal dotfiles config zsh

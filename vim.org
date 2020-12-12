@@ -10,13 +10,13 @@
   #+END_SRC
 
 * Minimal configuration
-  #+BEGIN_SRC text :tangle "~/.vimrc"
+  #+BEGIN_SRC text
     set nocompatible              " be iMproved, required
     filetype off                  " required
   #+END_SRC
 
 * Plugins
-  #+BEGIN_SRC text :tangle "~/.vimrc"
+  #+BEGIN_SRC text
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
@@ -27,7 +27,7 @@
   #+END_SRC
 
 * Visual configurations
-  #+BEGIN_SRC text :tangle "~/.vimrc"
+  #+BEGIN_SRC text
     filetype plugin indent on    " required
 
     set t_Co=256
@@ -46,6 +46,6 @@
   #+END_SRC
 
 * Color schema - [[https://draculatheme.com/vim][Dracula]]
-  #+BEGIN_SRC text :tangle "~/.vimrc"
+  #+BEGIN_SRC text :tangle
     colorscheme dracula
   #+END_SRC
