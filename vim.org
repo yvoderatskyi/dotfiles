@@ -4,11 +4,6 @@
 #+PROPERTY: header-args+ :comments no
 #+PROPERTY: header-args+ :tangle "~/.vimrc"
 
-* Plugin Manager
-  #+BEGIN_SRC shell
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  #+END_SRC
-
 * Minimal configuration
   #+BEGIN_SRC text
     set nocompatible              " be iMproved, required
