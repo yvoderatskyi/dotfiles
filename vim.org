@@ -46,6 +46,6 @@
   #+END_SRC
 
 * Color schema - [[https://draculatheme.com/vim][Dracula]]
-  #+BEGIN_SRC text :tangle
+  #+BEGIN_SRC text
     colorscheme dracula
   #+END_SRC
