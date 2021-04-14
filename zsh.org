@@ -2,7 +2,7 @@
 #+AUTHOR: Yurii Voderatskyi
 #+KEYWORDS: personal dotfiles config zsh
 #+PROPERTY: header-args+ :comments both
-#+PROPERTY: header-args+ :tangle "~/.zshrc"
+#+PROPERTY: header-args+ :tangle ".zshrc"
 
 * antigen - plugin manager
    #+BEGIN_SRC sh

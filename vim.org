@@ -2,7 +2,7 @@
 #+AUTHOR: Yurii Voderatskyi
 #+KEYWORDS: personal dotfiles config vim org
 #+PROPERTY: header-args+ :comments no
-#+PROPERTY: header-args+ :tangle "~/.vimrc"
+#+PROPERTY: header-args+ :tangle ".vimrc"
 
 * Minimal configuration
   #+BEGIN_SRC text

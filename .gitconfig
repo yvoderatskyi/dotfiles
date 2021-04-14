@@ -1,0 +1,13 @@
+[user]
+  name = Yurii Voderatskyi
+
+[core]
+  editor = vim
+
+[credential]
+  helper = osxkeychain
+
+[core]
+  pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Dracula'
+[interactive]
+  diffFilter = delta --color-only

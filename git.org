@@ -5,22 +5,22 @@
 
 * User name
   I prefer [[#git-email-per-project][setting emails per project]] and name - globally. On Mac I use OSX Keychain to store SSH keys.
-  #+BEGIN_SRC conf :tangle "~/.gitconfig"
+  #+BEGIN_SRC conf :tangle ".gitconfig"
     [user]
       name = Yurii Voderatskyi
   #+END_SRC
 * Set vim as editor
-  #+BEGIN_SRC conf :tangle "~/.gitconfig"
+  #+BEGIN_SRC conf :tangle ".gitconfig"
     [core]
       editor = vim
   #+END_SRC
 * Credentials helper
-  #+BEGIN_SRC conf :tangle "~/.gitconfig"
+  #+BEGIN_SRC conf :tangle ".gitconfig"
     [credential]
       helper = osxkeychain
   #+END_SRC
 * [[https://github.com/dandavison/delta][Delta]] as pager and diff tool
-  #+BEGIN_SRC conf :tangle "~/.gitconfig"
+  #+BEGIN_SRC conf :tangle ".gitconfig"
     [core]
       pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Dracula'
     [interactive]
