@@ -8,4 +8,3 @@ zshrc = "~/.zshrc"
 gitconfig = "~/.gitconfig"
 
 [homebrew.files]
-Brewfile = "~/.Brewfile"

@@ -1,2 +1,2 @@
 [homebrew.files]
-Brewfile = "~/.Brewfile"
+Brewfile_macbookair = "~/.Brewfile"
