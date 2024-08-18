@@ -1,0 +1,10 @@
+{{#if (and email git_username)}}
+[user]
+    email = {{email}}
+    name = {{git_username}}
+{{/if}}
+
+{{#if (is_executable "vim")}}
+[core]
+  editor = vim
+{{/if}}

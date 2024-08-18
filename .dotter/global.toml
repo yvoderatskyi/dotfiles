@@ -1,0 +1,11 @@
+[zsh.files]
+zshrc = "~/.zshrc"
+
+[starship.files]
+"starship.toml" = "~/.config/starship.toml"
+
+[git.files]
+gitconfig = "~/.gitconfig"
+
+[homebrew.files]
+Brewfile = "~/.Brewfile"
