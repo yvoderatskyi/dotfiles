@@ -8,3 +8,10 @@ zshrc = "~/.zshrc"
 gitconfig = "~/.gitconfig"
 
 [homebrew.files]
+
+[flox.files]
+floxenvjson = "~/.flox/env.json"
+floxmanifesttoml = "~/.flox/env/manifest.toml"
+
+[vim.files]
+vimrc = "~/.vimrc"
