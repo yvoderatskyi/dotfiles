@@ -1,10 +1,12 @@
-{{#if (and email git_username)}}
 [user]
-    email = {{email}}
-    name = {{git_username}}
-{{/if}}
+    email = {{ vars.git_email }}
+    name = {{ vars.git_username }}
 
-{{#if (is_executable "vim")}}
 [core]
-  editor = vim
-{{/if}}
+    editor = vim
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true

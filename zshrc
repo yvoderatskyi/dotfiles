@@ -1,11 +1,23 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# User-local tools and the canonical mise/Homebrew package prefixes.
+export PATH="$HOME/bin:$HOME/.local/bin:/opt/homebrew/bin:/home/linuxbrew/.linuxbrew/bin:/usr/local/bin:$PATH"
 
+if command -v brew >/dev/null 2>&1; then
+  eval "$(brew shellenv)"
+fi
 
-{{#if (is_executable "flox")}}
-# flox - environment manager
-flox activate -d ~/
-{{/if}}
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
+
+if [[ -r "$HOME/.cargo/env" ]]; then
+  source "$HOME/.cargo/env"
+fi
+
+export PATH="$HOME/.openfang/bin:$PATH"
+
+if [[ -r "$HOME/.openclaw/completions/openclaw.zsh" ]]; then
+  source "$HOME/.openclaw/completions/openclaw.zsh"
+fi
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -13,49 +25,41 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-{{#if (is_executable "zplug")}}
-# zplug - zsh plugin manager
-export ZPLUG_HOME=$HOMEBREW_PREFIX/opt/zplug
-source $ZPLUG_HOME/init.zsh
-{{/if}}
+if command -v brew >/dev/null 2>&1 && brew --prefix zplug >/dev/null 2>&1; then
+  export ZPLUG_HOME="$(brew --prefix zplug)"
+elif [[ -r /opt/homebrew/opt/zplug/init.zsh ]]; then
+  export ZPLUG_HOME="/opt/homebrew/opt/zplug"
+elif [[ -r /home/linuxbrew/.linuxbrew/opt/zplug/init.zsh ]]; then
+  export ZPLUG_HOME="/home/linuxbrew/.linuxbrew/opt/zplug"
+fi
 
-# ohmyzsh
-source $ZSH/oh-my-zsh.sh
+if [[ -n "$ZPLUG_HOME" && -r "$ZPLUG_HOME/init.zsh" ]]; then
+  source "$ZPLUG_HOME/init.zsh"
+fi
 
-
-{{#if dotter.packages.starship}}
-# starship - shell prompt
-eval "$(starship init zsh)"
-{{/if}}
-
-
-{{#if dotter.packages.homebrew}}
-# homebrew - mac package manager
-eval "$(/opt/homebrew/bin/brew shellenv)"
-{{/if}}
+if [[ -r "$ZSH/oh-my-zsh.sh" ]]; then
+  source "$ZSH/oh-my-zsh.sh"
+fi
 
 
-{{#if (is_executable "bat")}}
-# bat - better cat
-alias cat="bat"
-{{/if}}
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
 
+if command -v bat >/dev/null 2>&1; then
+  alias cat="bat"
+fi
 
-{{#if (is_executable "thefuck")}}
-# thefuck - corrects command line errors
-eval $(thefuck --alias)
-{{/if}}
+if command -v thefuck >/dev/null 2>&1; then
+  eval "$(thefuck --alias)"
+fi
 
+if command -v just >/dev/null 2>&1; then
+  eval "$(just --completions zsh)"
+fi
 
-{{#if (is_executable "just")}}
-# just - better Makefile
-eval $(just --completions zsh)
-{{/if}}
-
-
-{{#if (is_executable "colima")}}
-# colima - docker for Mac
-export COLIMA_HOME=~/.colima
-export DOCKER_HOST="unix://${COLIMA_HOME}/default/docker.sock"
-eval $(colima completion zsh)
-{{/if}}
+if command -v colima >/dev/null 2>&1; then
+  export COLIMA_HOME="$HOME/.colima"
+  export DOCKER_HOST="unix://${COLIMA_HOME}/default/docker.sock"
+  eval "$(colima completion zsh)"
+fi

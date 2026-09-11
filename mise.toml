@@ -1,0 +1,52 @@
+[dotfiles]
+"~/.zshrc" = { source = "zshrc", mode = "symlink" }
+"~/.gitconfig" = { source = "gitconfig", mode = "template" }
+"~/.vimrc" = { source = "vimrc", mode = "symlink" }
+"~/.config/starship.toml" = { source = "starship.toml", mode = "symlink" }
+
+[bootstrap.brew]
+adopt = true
+
+[bootstrap.packages]
+# Command-line tools previously managed by Flox and Dotter's Brewfile.
+"brew:bat" = "latest"
+"brew:bottom" = "latest"
+"brew:colima" = "latest"
+"brew:difftastic" = "latest"
+"brew:direnv" = "latest"
+"brew:docker" = "latest"
+"brew:docker-buildx" = "latest"
+"brew:docker-compose" = "latest"
+"brew:fzf" = "latest"
+"brew:gh" = "latest"
+"brew:git" = "latest"
+"brew:git-lfs" = "latest"
+"brew:just" = "latest"
+"brew:mas" = { version = "latest", os = "macos" }
+"brew:mise" = "latest"
+"brew:starship" = "latest"
+"brew:thefuck" = "latest"
+"brew:tldr" = "latest"
+"brew:vim" = "latest"
+"brew:watchexec" = "latest"
+"brew:zplug" = "latest"
+"brew:zsh" = "latest"
+
+# Desktop applications previously managed by Brewfile_macbookair.
+"brew-cask:alacritty" = { version = "latest", os = "macos" }
+"brew-cask:chatgpt" = { version = "latest", os = "macos" }
+"brew-cask:font-fira-code-nerd-font" = { version = "latest", os = "macos" }
+"brew-cask:font-fira-mono-for-powerline" = { version = "latest", os = "macos" }
+"brew-cask:font-fira-mono-nerd-font" = { version = "latest", os = "macos" }
+"brew-cask:google-chrome" = { version = "latest", os = "macos" }
+"brew-cask:iterm2" = { version = "latest", os = "macos" }
+"brew-cask:logseq" = { version = "latest", os = "macos" }
+"brew-cask:obsidian" = { version = "latest", os = "macos" }
+"brew-cask:telegram-desktop" = { version = "latest", os = "macos" }
+"brew-cask:visual-studio-code" = { version = "latest", os = "macos" }
+"brew-cask:whatsapp" = { version = "latest", os = "macos" }
+
+# Mac App Store applications.
+"mas:302584613" = { version = "latest", os = "macos" } # Kindle
+"mas:517914548" = { version = "latest", os = "macos" } # Dashlane
+"mas:585829637" = { version = "latest", os = "macos" } # Todoist
