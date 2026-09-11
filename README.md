@@ -25,10 +25,6 @@ run reports `Homebrew owns this cask`, uninstall only the named cask with
 an app bundle may require granting its macOS Privacy & Security permissions
 again.
 
-Todoist is intentionally managed through the Mac App Store entry already used
-by mise on this machine. Remove a previous Homebrew install with
-`brew uninstall --cask todoist-app` before the first bootstrap.
-
 To inspect only one part of the setup:
 
 ```sh
